@@ -113,3 +113,5 @@ The `DiplomaVerification.sol` contract handles:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+## Rapport
+[Rapport du projet](docs/rapport.pdf)
