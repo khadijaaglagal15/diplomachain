@@ -1,0 +1,304 @@
+[
+  {
+    "inputs": [],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "diplomaHash",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "studentName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "universityName",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "diplomaName",
+        "type": "string"
+      }
+    ],
+    "name": "DiplomaIssued",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "diplomaHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "DiplomaRevoked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "universityAddress",
+        "type": "address"
+      }
+    ],
+    "name": "UniversityAuthorized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "universityAddress",
+        "type": "address"
+      }
+    ],
+    "name": "UniversityRevoked",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_universityAddress",
+        "type": "address"
+      }
+    ],
+    "name": "authorizeUniversity",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "authorizedUniversities",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "name": "diplomas",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "studentName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "universityName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "diplomaName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "ipfsHash",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "issueDate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isValid",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_studentName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_universityName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_diplomaName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_ipfsHash",
+        "type": "string"
+      }
+    ],
+    "name": "getDiplomaHash",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "_studentName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_universityName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_diplomaName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "_ipfsHash",
+        "type": "string"
+      }
+    ],
+    "name": "issueDiploma",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_diplomaHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "revokeDiploma",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_universityAddress",
+        "type": "address"
+      }
+    ],
+    "name": "revokeUniversity",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_diplomaHash",
+        "type": "bytes32"
+      }
+    ],
+    "name": "verifyDiploma",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "studentName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "universityName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "diplomaName",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "ipfsHash",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "issueDate",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isValid",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
